@@ -13,7 +13,7 @@ public class UserDao {
 	public boolean createUser(String firstName, String lastName, String emailId, String mobileNumber, String password) {
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con.prepareStatement(
-						"Insert into user (first_name, last_name, email_id, mobile_number, password) value (?, ?, ?, ?, ?)")) {
+						"insert into user (first_name, last_name, email_id, mobile_number, password) value (?, ?, ?, ?, ?)")) {
 			statement.setString(1, firstName);
 			statement.setString(2, lastName);
 			statement.setString(3, emailId);

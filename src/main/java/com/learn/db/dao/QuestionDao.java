@@ -17,7 +17,7 @@ public class QuestionDao {
 			String rightOption) {
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con.prepareStatement(
-						"Insert into question (question, option_a, option_b, option_c, option_d, right_option)"
+						"insert into question (question, option_a, option_b, option_c, option_d, right_option)"
 								+ " value (?, ?, ?, ?, ?, ?)")) {
 			statement.setString(1, question);
 			statement.setString(2, optionA);
@@ -113,7 +113,7 @@ public class QuestionDao {
 		List<Long> qIds = new ArrayList<Long>();
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con.prepareStatement(
-						"Insert into question (question, option_a, option_b, option_c, option_d, right_option)"
+						"insert into question (question, option_a, option_b, option_c, option_d, right_option)"
 								+ " value (?, ?, ?, ?, ?, ?)",
 						PreparedStatement.RETURN_GENERATED_KEYS)) {
 			for (QuestionSet question : questions) {

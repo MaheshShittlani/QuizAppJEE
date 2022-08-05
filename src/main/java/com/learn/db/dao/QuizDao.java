@@ -14,7 +14,7 @@ public class QuizDao {
 
 	public Long addQuiz(String title, String category) {
 		try (Connection con = DatabaseConnection.getConnection();
-				PreparedStatement statement = con.prepareStatement("Insert into quiz (title, category) value (?, ?)",
+				PreparedStatement statement = con.prepareStatement("insert into quiz (title, category) value (?, ?)",
 						PreparedStatement.RETURN_GENERATED_KEYS)) {
 			statement.setString(1, title);
 			statement.setString(2, category);

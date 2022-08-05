@@ -17,7 +17,7 @@ public class QuizQuestionDao {
 	public boolean addQuizQuestion(Long quizId, Long questionId) {
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con
-						.prepareStatement("Insert into quiz_question (quiz_id, question_id) value (?, ?)")) {
+						.prepareStatement("insert into quiz_question (quiz_id, question_id) value (?, ?)")) {
 			statement.setLong(1, quizId);
 			statement.setLong(2, questionId);
 			int updateCount = statement.executeUpdate();
@@ -63,7 +63,7 @@ public class QuizQuestionDao {
 	public boolean addQuizQuestion(Long quizId, List<Long> questionIds) {
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con
-						.prepareStatement("Insert into quiz_question (quiz_id, question_id) value (?, ?)")) {
+						.prepareStatement("insert into quiz_question (quiz_id, question_id) value (?, ?)")) {
 			for (Long questionId : questionIds) {
 				statement.setLong(1, quizId);
 				statement.setLong(2, questionId);

@@ -60,6 +60,9 @@ public class ExcelReader {
 					}
 					i++;
 				}
+				if(question == null || question.trim().isEmpty()) {
+					return questionSets;
+				}
 				questionSets.add(new QuestionSet(question, optionA, optionB, optionC, optionD, correctOption));
 			}
 			return questionSets;

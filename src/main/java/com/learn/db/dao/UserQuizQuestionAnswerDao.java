@@ -15,7 +15,7 @@ public class UserQuizQuestionAnswerDao {
 	public boolean addQuizQuestion(Long userId, Long quizQuestionId, String selectedOption) {
 		try (Connection con = DatabaseConnection.getConnection();
 				PreparedStatement statement = con.prepareStatement(
-						"Insert into user_quiz_ques_ans (user_id, quiz_question_id, selected_option) value (?, ?, ?)")) {
+						"insert into user_quiz_ques_ans (user_id, quiz_question_id, selected_option) value (?, ?, ?)")) {
 			statement.setLong(1, userId);
 			statement.setLong(2, quizQuestionId);
 			statement.setString(3, selectedOption);
@@ -32,7 +32,7 @@ public class UserQuizQuestionAnswerDao {
 	public List<UserScore> getLeaderBoard(Long quizId) {
 		List<UserScore> questions = new ArrayList<UserScore>();
 		try (PreparedStatement statement = DatabaseConnection.getConnection().prepareStatement(
-				"SELECT u.first_name, u.last_name, count(uqqa.id) score FROM quiz.user_quiz_ques_ans uqqa "
+				"select u.first_name, u.last_name, count(uqqa.id) score from quiz.user_quiz_ques_ans uqqa "
 						+ " inner join quiz_question qq on qq.id = uqqa.quiz_question_id "
 						+ " inner join question q on q.id = qq.question_id "
 						+ " inner join user u on u.id = uqqa.user_id "
