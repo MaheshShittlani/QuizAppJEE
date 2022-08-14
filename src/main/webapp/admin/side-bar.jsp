@@ -50,8 +50,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Add New Question(s)</a>
-                <a class="collapse-item" href="#">Question List</a>
+                <a class="collapse-item" href="${pageContext.request.contextPath}/admin/addQuestion">Add New Question(s)</a>
+                <a class="collapse-item" href="${pageContext.request.contextPath}/admin/questions">Question List</a>
             </div>
         </div>
     </li>
