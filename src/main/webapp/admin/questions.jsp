@@ -13,20 +13,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>View Question(s) | Quiz App</title>
+
 
     <!-- Custom fonts for this template -->
-    <!-- <link href="${pageContext.request.contextPath}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="${pageContext.request.contextPath}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${pageContext.request.contextPath}/admin/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="${pageContext.request.contextPath}/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -50,29 +47,23 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
-
+					<div class="mb-2 mr-auto">
+                    	<a class="btn btn-success" href="${pageContext.request.contextPath}/admin/addQuestion">Add New Question</a>
+                    </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                        </div>
+                
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered table-sm">
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
 											<th>Question</th>
-											<th>Option 1</th>
-											<th>Option 2</th>
-											<th>Option 3</th>
-											<th>Option 4</th>
+											<th>Option-1</th>
+											<th>Option-2</th>
+											<th>Option-3</th>
+											<th>Option-4</th>
 											<th>Correct Option</th>
 											<th>Action</th>
                                         </tr>
@@ -88,8 +79,9 @@
 												<td>${question.optionD}</td>
 												<td>${question.correctOption}</td>
 												<td>
-													<a href="${pageContext.request.contextPath}/admin/editQuestion/${question.id}">Edit</a>
-													<a href="${pageContext.request.contextPath}/admin/deleteQuestion/${question.id}">Delete</a>
+													<a href="${pageContext.request.contextPath}/admin/viewQuestion/${question.id}"><i class="fas fa-eye"></i></a>
+													<a href="${pageContext.request.contextPath}/admin/editQuestion/${question.id}"><i class="fas fa-edit"></i></a>
+													<a href="${pageContext.request.contextPath}/admin/deleteQuestion/${question.id}"><i class="fas fa-trash"></i></a>
 												</td>
 											</tr>
 									   	</c:forEach>

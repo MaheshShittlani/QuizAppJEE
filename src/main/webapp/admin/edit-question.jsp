@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quiz List | Quiz App</title>
+    <title>Edit Question | Quiz App</title>
 
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -49,12 +49,12 @@
 
                     <!-- Page Heading -->
                     <div class="mb-2 mr-auto">
-                    	<a class="btn btn-success" href="${pageContext.request.contextPath}/admin/addQuiz">Create New Quiz</a>
+                    	<a class="btn btn-success" href="${pageContext.request.contextPath}/admin/addQuestion">Create New Question</a>
                     </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Quiz List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Edit Question</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -84,7 +84,7 @@
                                 		<input type="text" id="correctOption" name="correctOption" value="${question.correctOption}" class="form-control"/>
                                 	</div>
 							    	<div class="from-group">
-								    	<input type="submit" value="Update Quiz" class="btn btn-primary">
+								    	<input type="submit" value="Update Question" class="btn btn-primary">
 							    	</div>
 							    </form>
                             </div>

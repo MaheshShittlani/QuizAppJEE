@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quiz List | Quiz App</title>
+    <title>Add Question | Quiz App</title>
 
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -49,42 +49,42 @@
 
                     <!-- Page Heading -->
                     <div class="mb-2 mr-auto">
-                    	<a class="btn btn-success" href="${pageContext.request.contextPath}/admin/addQuiz">Create New Quiz</a>
+                    	<a class="btn btn-success" href="${pageContext.request.contextPath}/admin/questions">Question List</a>
                     </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Quiz List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Add New Question</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form action="${pageContext.request.contextPath}/admin/addQuestion" method="post">
                                 	<div class="form-group">
                                 		<label for="question">Question</label>
-                                		<input type="text" id="question" name="question" class="form-control"/>
+                                		<input type="text" id="question" name="question" class="form-control" placeholder="Question" required/>
                                 	</div>
                                 	<div class="form-group">
                                 		<label for="question">Option-1</label>
-                                		<input type="text" id="optionA" name="optionA" class="form-control"/>
+                                		<input type="text" id="optionA" name="optionA" class="form-control" placeholder="Option A" required/>
                                 	</div>
                                 	<div class="form-group">
                                 		<label for="question">Option-2</label>
-                                		<input type="text" id="optionB" name="optionB" class="form-control"/>
+                                		<input type="text" id="optionB" name="optionB" class="form-control" placeholder="Option B" required/>
                                 	</div>
                                 	<div class="form-group">
                                 		<label for="question">Option-3</label>
-                                		<input type="text" id="optionC" name="optionC" class="form-control"/>
+                                		<input type="text" id="optionC" name="optionC" class="form-control" placeholder="Option C" required/>
                                 	</div>
                                 	<div class="form-group">
                                 		<label for="question">Option-4</label>
-                                		<input type="text" id="optionD" name="optionD" class="form-control"/>
+                                		<input type="text" id="optionD" name="optionD" class="form-control" placeholder="Option D"/>
                                 	</div>
                                 	<div class="form-group">
                                 		<label for="question">Correct Answer</label>
-                                		<input type="text" id="correctOption" name="correctOption" class="form-control"/>
+                                		<input type="text" id="correctOption" name="correctOption" class="form-control" placeholder="Correct Answer"/>
                                 	</div>
 							    	<div class="from-group">
-								    	<input type="submit" value="Update Quiz" class="btn btn-primary">
+								    	<input type="submit" value="Add Question" class="btn btn-primary">
 							    	</div>
 							    </form>
                             </div>
