@@ -8,12 +8,13 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/dom4j-1.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.29.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/poi-3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/poi-ooxml-3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/poi-ooxml-schemas-3.7-beta1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/quiz-app/src/main/webapp/WEB-INF/lib/xmlbeans.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.29.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/poi-ooxml-schemas-3.7-beta1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Documents/Mahesh/Java/QuizAppJEE/src/main/webapp/WEB-INF/lib/xmlbeans.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
