@@ -52,10 +52,7 @@
                 <div class="container-fluid">
 
 					<div class="row">
-						<div class="col"><h1 class="h3 mb-2 text-gray-800">View Question</h1></div>
-						<div class="col">
-                        	<a href="${pageContext.request.contextPath}/admin/editQuestion/${question.id}" class="btn btn-primary btn-xs">Edit Question</a>						
-						</div>
+						<div class="col"><h1 class="h3 mb-2 text-gray-800">View Question</h1></div>						
 					</div>
                     <!-- Page Heading -->
                     
