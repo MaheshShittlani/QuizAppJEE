@@ -62,7 +62,7 @@ public class AddQuiz extends HttpServlet {
 			} else {
 				session.setAttribute("info", "Quiz added successfully.");
 				session.setAttribute("quizId", quizId);
-				response.sendRedirect(request.getContextPath() + "/admin/uploadQuiz");
+				response.sendRedirect(request.getContextPath() + "/admin/addQuizQuestion/"+quizId);
 			}
 		} else {
 			session.invalidate();

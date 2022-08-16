@@ -51,15 +51,76 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Dashboard</h1>
+                    
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Total Quiz</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">${totalQuiz}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Total Questions</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">${totalQuestion}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comment fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+	
+						<!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Total Users</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">${totalUser}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Content Row -->
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Quiz List</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
@@ -75,8 +136,8 @@
 												<td><a href="${pageContext.request.contextPath}/admin/viewQuiz/${quiz.id}">${quiz.title}</a></td>
 												<td>${quiz.category}</td>
 												<td>
-													<a href="${pageContext.request.contextPath}/admin/editQuiz/${quiz.id}">Edit</a>
-													<a href="${pageContext.request.contextPath}/admin/deleteQuiz/${quiz.id}">Delete</a>
+													<a href="${pageContext.request.contextPath}/admin/editQuiz/${quiz.id}"><i class="fas fa-edit"></i></a>
+													<a href="${pageContext.request.contextPath}/admin/deleteQuiz/${quiz.id}"><i class="fas fa-trash"></i></a>
 												</td>
 											</tr>
 									   	</c:forEach>

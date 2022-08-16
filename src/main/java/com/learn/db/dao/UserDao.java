@@ -64,6 +64,7 @@ public class UserDao {
 		}
 		return null;
 	}
+
 	public String getPassword(long userId) {
 		try (PreparedStatement statement = DatabaseConnection.getConnection()
 				.prepareStatement("select id, password from user where id = ?")) {
@@ -132,4 +133,18 @@ public class UserDao {
 		return null;
 	}
 
+	public Long totalCount() {
+		try (PreparedStatement statement = DatabaseConnection.getConnection()
+				.prepareStatement("select count(id) countUser from user")) {
+			ResultSet rs = statement.executeQuery();
+			if (rs.next()) {
+				return rs.getLong("countUser");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return 0l;
+	}
 }

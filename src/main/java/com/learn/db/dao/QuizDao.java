@@ -96,4 +96,19 @@ public class QuizDao {
 		return null;
 	}
 
+	public Long totalCount() {
+		try (PreparedStatement statement = DatabaseConnection.getConnection()
+				.prepareStatement("select count(id) countQuiz from quiz where deleted = 'N'")) {
+			ResultSet rs = statement.executeQuery();
+			if (rs.next()) {
+				return rs.getLong("countQuiz");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return 0l;
+	}
+
 }

@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.learn.db.dao.QuestionDao;
 import com.learn.db.dao.QuizDao;
+import com.learn.db.dao.UserDao;
 
 /**
  * Servlet implementation class Dashboard
@@ -35,6 +37,9 @@ public class Dashboard extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		if (Authorizer.isAdminAuthorised(session)) {
 			session.setAttribute("quizList", new QuizDao().getAllQuiz());
+			session.setAttribute("totalUser", new UserDao().totalCount());
+			session.setAttribute("totalQuiz", new QuizDao().totalCount());
+			session.setAttribute("totalQuestion", new QuestionDao().totalCount());
 			request.getRequestDispatcher("/admin/dashboard.jsp").include(request, response);
 		} else {
 			session.invalidate();
